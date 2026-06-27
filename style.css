@@ -12,11 +12,6 @@ main {
     padding: 20px 24px 40px;
 }
 
-h1 {
-    font-size: 48px;
-    margin-bottom: 8px;
-}
-
 h2 {
     font-size: 34px;
     margin-top: 15px;
@@ -37,6 +32,7 @@ hr {
 
 a {
     color: #ece6da;
+    text-decoration: none;
 }
 
 .banner {
@@ -49,4 +45,80 @@ a {
 .content {
     max-width: 680px;
     margin: 0 auto;
+}
+
+.social-links {
+    display: grid;
+    grid-template-columns: 220px 220px;
+    grid-template-areas:
+        "youtube youtube"
+        "facebook instagram"
+        "tiktok x";
+    gap: 18px 30px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.social-links a {
+    box-sizing: border-box;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    background: #2b2b2b;
+    padding: 10px 20px;
+    border-radius: 16px;
+    color: #ece6da;
+    transition: all 0.2s ease;
+}
+
+.social-links a:hover {
+    background: #383838;
+    color: #f0b44c;
+    transform: translateY(-2px);
+}
+
+.social-links i {
+    color: #f0b44c;
+    font-size: 1.5rem;
+    width: 30px;
+    text-align: center;
+}
+
+.youtube-button {
+    grid-area: youtube;
+    justify-self: center;
+}
+
+.facebook-button {
+    grid-area: facebook;
+}
+
+.instagram-button {
+    grid-area: instagram;
+}
+
+.tiktok-button {
+    grid-area: tiktok;
+}
+
+.x-button {
+    grid-area: x;
+}
+
+@media (max-width: 600px) {
+    .social-links {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "youtube"
+            "facebook"
+            "instagram"
+            "tiktok"
+            "x";
+    }
+
+    .social-links a {
+        width: 100%;
+    }
 }
