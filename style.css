@@ -17,6 +17,7 @@ h2 {
     margin-top: 15px;
     margin-bottom: 20px;
     color: #f0b24a;
+    text-align: center;
 }
 
 p {
@@ -121,4 +122,8 @@ a {
     .social-links a {
         width: 100%;
     }
+}
+
+.contact-email {
+    text-align: center;
 }
